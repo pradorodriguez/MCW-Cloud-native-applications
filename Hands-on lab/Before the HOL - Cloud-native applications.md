@@ -109,6 +109,7 @@ You should follow all of the steps provided in this section _before_ taking part
    ```bash
    az account set --subscription {id}
    ```
+    NOTA DE MARCO PRADO: Pasos Opcional
 
 ### Task 2: Download Starter Files
 
@@ -154,6 +155,11 @@ Create an Azure Resource Group to hold most of the resources that you create in 
    az group create -l westus -n fabmedical-sol
    ```
 
+
+    NOTA DE MARCO PRADO: [SUFFIX] = pueden utilizar su nombre de usuario (azureX)
+		Ejemplo: az group create -l westus -n fabmedical-azure1
+
+
 2. When this completes, the Azure Portal shows your Resource Group.
 
    ![In this screenshot of the Azure Portal, the fabmedical-sol Resource group is listed.](media/b4-image8.png)
@@ -179,6 +185,8 @@ You create VMs during the upcoming exercises. In this section, you create an SSH
 3. When asked to save the generated key to a file, enter `.ssh/fabmedical` for the name.
 
 4. Enter a passphrase when prompted, and **don't forget it**!
+
+    NOTA DE MARCO PRADO: Pueden utilizar la misma contraseña/Passphrase de logueo (solo para efectos de laboratorio).
 
 5. Because you entered ".ssh/fabmedical", ssh-keygen generates the file in the ".ssh" folder in your user folder, where the cloud shell opens by default.
 
@@ -322,6 +330,10 @@ FabMedical has provided starter files for you. They have taken a copy of the web
    >
    > This will take you to the version of the starter files that will be used by that edition of the lab.
 
+
+    NOTA DE MARCO PRADO: Seleccionar el folder de Infraestructura: cd ~/MCW-Cloud-native-applications/Hands-on\ lab/lab-files/infrastructure/
+
+
 3. You'll see the listing includes three folders, one for the web site, another for the content API and one to initialize API data:
 
    ```bash
@@ -336,6 +348,14 @@ FabMedical has provided starter files for you. They have taken a copy of the web
    git config --global user.email "you@example.com"
    git config --global user.name "Your Name"
    ```
+
+
+    NOTA DE MARCO PRADO: Utilizar cualquier correo y usuario de referencia.
+        Ejemplo:
+          git config --global user.email "maprado@microsoft.com"
+          git config --global user.name "Marco Prado"
+          Nota: Este comando revisa la informacion de usuario para GIT: more ~/.gitconfig
+
 
 5. Configure git CLI to cache your credentials, so that you don't have to keep
    re-typing them.
@@ -369,6 +389,10 @@ FabMedical has provided starter files for you. They have taken a copy of the web
    - Then choose the three dots to access the "Preview Features" menu item.
    - Toggle multi-stage pipelines to "On".
 
+
+      NOTA DE MARCO PRADO: Pueden omitir este paso
+
+
 9. Next, add an Azure Service Connection to your Azure DevOps account. Select the
    Project settings gear icon to access your settings. Then select Service Connections.
 
@@ -380,6 +404,10 @@ FabMedical has provided starter files for you. They have taken a copy of the web
 11. Select the link indicated in the screenshot below to access the advanced settings.
 
     ![A screenshot of the Add Azure Resource Manager dialog where you can enter your subscription information.](media/vso-service-connection-settings2.png)
+
+
+      NOTA DE MARCO PRADO: Esta seccion se ha actualizado en el portal. Seleccionar "Service principal (manual)"
+
 
 12. Enter the required information using the service principal information you
     created earlier.
@@ -408,6 +436,10 @@ FabMedical has provided starter files for you. They have taken a copy of the web
 
     ![A screenshot of the Add Docker Registry Service Connection dialog.](media/hol-2019-10-01_20-30-17.png)
 
+
+      NOTA DE MARCO PRADO: Adicionalmente seleccionar "Azure Container Registry"
+      
+
 16. Enter the required information using the service principal information you
     created earlier.
 
@@ -433,6 +465,11 @@ FabMedical has provided starter files for you. They have taken a copy of the web
     - Once Azure DevOps creates the repository, select "Generate Git credentials".
 
     ![The Clone to your computer section is displayed with the Generate Git Credentials button selected.](media/b4-image50.png)
+
+
+
+      NOTA DE MARCO PRADO: NO SELECCIONAR opcion de "Add a README"
+
 
 19. Copy the Personal Access Token and save it for later steps.
 
