@@ -143,6 +143,10 @@ The purpose of this task is to make sure you can run the application successfull
 1. From Azure Cloud Shell, connect to your build agent if you are not already
    connected. (If you need to reconnect, please review the instructions in the
    "Before the HOL" document.)
+   
+   
+      NOTA DE MARCO PRADO:  Loguearse por medio de SSH a la VM generada en la seccion anterior.
+
 
 2. Type the following command to create a Docker network named "fabmedical":
 
@@ -190,6 +194,11 @@ The purpose of this task is to make sure you can run the application successfull
    ```bash
    sudo chown -R $USER:$(id -gn $USER) /home/adminfabmedical/.config
    ```
+
+
+      NOTA DE MARCO PRADO: En caso de observar un error por permisos en la carpeta al ejecutar "npm install", ejecutar el comando utilizando sudo.
+      Ejemplo: sudo npm install
+
 
 7. Initialize the database.
 
@@ -265,6 +274,12 @@ The purpose of this task is to make sure you can run the application successfull
     ```bash
     sudo chown -R $USER:$(id -gn $USER) /home/adminfabmedical/.config
     ```
+
+
+
+      NOTA DE MARCO PRADO: En caso de observar un error por permisos en la carpeta al ejecutar "npm install" y "ng build", ejecutar el comando utilizando sudo.
+      Ejemplo: "sudo npm install" y "sudo ng build"
+
 
 14. Press ENTER again to get a command prompt for the next step.
 
@@ -485,6 +500,13 @@ In this task, you will configure the "web" container to communicate with the API
 
    ![In this screenshot of Dockerfile, the CONTENT_API_URL code appears above the next Dockerfile line, which reads EXPOSE 3000.](media/hol-2019-10-01_19-37-35.png)
 
+
+
+      NOTA DE MARCO PRADO: El archido Dockerfile del contenedor "content-web" se encuentra en el siguiente directorio:
+          /home/adminfabmedical/content-web
+      Nota: En caso de no contar permisos para grabar, correr el editor con "sudo". Ejemplo: sudo nano Dockerfile
+
+
 5. Press the Escape key and type ":wq" and then press the Enter key to save and close the file.
 
    ```text
@@ -498,6 +520,10 @@ In this task, you will configure the "web" container to communicate with the API
    ```bash
    docker image build -t content-web .
    ```
+
+
+    NOTA DE MARCO PRADO: Ejecutar el comando dentro del directorio "/home/adminfabmedical/content-web"
+
 
 7. Create and start the image passing the correct URI to the API container as an environment variable. This variable will address the API application using its container name over the Docker network you created. After running the container, check to see the container is running and note the dynamic port assignment for the next step.
 
@@ -543,6 +569,11 @@ In this task, you will configure the "web" container to communicate with the API
     ```
 
     Enter credentials if prompted.
+
+
+
+      NOTA DE MARCO PRADO: en caso de observar un error sobre permisos denegados (ejemplo: error: could not lock config file /home/adminfabmedical/content-web/.git/config: Permission denied). Correr los comandos de git con sudo: "sudo git <comando>"
+
 
 ### Task 6: Run several containers with Docker compose
 
