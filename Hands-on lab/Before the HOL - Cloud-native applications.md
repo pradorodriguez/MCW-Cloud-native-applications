@@ -77,10 +77,12 @@ You should follow all of the steps provided in this section _before_ taking part
 1. Open a cloud shell by selecting the cloud shell icon in the menu bar.
 
    ![The cloud shell icon is highlighted on the menu bar.](media/b4-image35.png)
-
+    
 2. The cloud shell opens in the browser window. Choose "Bash" if prompted or use the left-hand dropdown on the shell menu bar to choose "Bash" (as shown).
 
    ![This is a screenshot of the cloud shell opened in a browser window. Bash was selected.](media/b4-image36.png)
+
+    NOTA DE MARCO PRADO: Pasos Opcional
 
 3. You should make sure to set your default subscription correctly. To view your current subscription type:
 
@@ -90,6 +92,8 @@ You should follow all of the steps provided in this section _before_ taking part
 
    ![In this screenshot of a Bash window, az account show has been typed and run at the command prompt. Some subscription information is visible in the window, and some information is obscured.](media/b4-image37.png)
 
+    NOTA DE MARCO PRADO: Pasos Opcional
+
 4. To list all of your subscriptions, type:
 
    ```bash
@@ -97,6 +101,8 @@ You should follow all of the steps provided in this section _before_ taking part
    ```
 
    ![In this screenshot of a Bash window, az account list has been typed and run at the command prompt. Some subscription information is visible in the window, and some information is obscured.](media/b4-image38.png)
+
+    NOTA DE MARCO PRADO: Pasos Opcional
 
 5. To set your default subscription to something other than the current selection, type the following, replacing {id} with the desired subscription id value:
 
